@@ -1,9 +1,9 @@
 # Mandatory settings
 
 blog_theme: light # Or use dark
-name: Chalk
+name: AneeshWrites
 paginate: 25
-url: # add your site url (format: https://example.com)
+url: https://blog.aneeshmg.com # add your site url (format: https://example.com)
 
 
 # Optional settings
@@ -13,13 +13,13 @@ baseurl: # Set if blog doesn't sit at the root of the domain (format: /blog)
 discus_identifier: # Add your Disqus identifier
 ga_analytics: # Add your GA Tracking Id
 local_fonts: false # Change to true if you wish to use local fonts
-rss_enabled: true # Change to false if not
+rss_enabled: false # Change to false if not
 scrollappear_enabled: true # Change to false to disable
 social:
   dribbble: # Add your Dribbble handle
-  facebook: # Add your Facebook handle
+  facebook: aneesh.mg # Add your Facebook handle
   flickr: # Add your Flickr handle
-  github: # Add your GitHub handle
+  github: aneeshmg # Add your GitHub handle
   linkedin: # Add your LinkedIn handle
   twitter: # Add your Twitter handle
   email: # Add your Email address
@@ -32,7 +32,7 @@ social:
   tumblr: # Add your Tumblr handle
   bitbucket: # Add your Bitbucket handle
   docker: # Add your Docker Hub handle
-  instagram: # Add your Instagram handle
+  instagram: aneeshmg # Add your Instagram handle
   keybase: # Add your Keybase handle
   medium: # Add your Medium handle
   spotify: # Add your Spotify handle
@@ -47,11 +47,16 @@ assets:
     css: { autoprefixer: {}}
     img: { optim: {}}
   source_maps: false
+  compression: true
   sources:
     - _assets/icons
     - _assets/javascripts
     - _assets/stylesheets
     - _assets/yarn
+  defaults:
+    js: { integrity: true } 
+    css: { integrity: true } 
+    img: { integrity: true } 
 collections:
   my_tags:
     output: true
