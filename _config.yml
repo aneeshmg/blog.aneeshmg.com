@@ -3,7 +3,7 @@
 blog_theme: light # Or use dark
 name: AneeshWrites
 paginate: 25
-url: https://blog.aneeshmg.com # add your site url (format: https://example.com)
+url: https://aneeshmg.github.io/blog.aneeshmg.com # add your site url (format: https://example.com)
 
 
 # Optional settings
