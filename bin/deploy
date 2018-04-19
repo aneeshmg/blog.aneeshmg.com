@@ -24,8 +24,8 @@ mv _site/* .
 rm -R _site/
 
 # Create CNAME file
-touch CNAME
-echo "blog.aneeshmg.com" > CNAME
+# touch CNAME
+# echo "blog.aneeshmg.com" > CNAME
 
 # Push to gh-pages.
 git add -fA
