@@ -1,55 +1,164 @@
----
-layout: default
-title: "The high quality, completely customizable, performant and 100% free blog template for Jekyll"
-description: "Chalk uses all the best tools and merges them into one premium blogging theme."
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>AneeshWrites | The high quality, completely customizable, performant and 100% free blog template for Jekyll</title>
+  <meta name="description" content="Chalk uses all the best tools and merges them into one premium blogging theme.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<ul class="article-list">
-  {% for post in paginator.posts %}
-    <li class="article-list-item {% if site.scrollappear_enabled %}scrollappear{% endif %}">
-      <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
-        <h5>
-          {{ post.title }}
-          {% include svg-icon.html icon="arrow-right" %}
-        </h5>
-      </a>
-      <p>
-        {% if post.description %}
-          {{ post.description }}  
-        {% else %}
-          {{ post.excerpt }}
-        {% endif %}
-      </p>
-      <div class="article-list-footer">
-        <span class="article-list-date">
-          {{ post.date | date: "%B %-d, %Y" }}
-        </span>
-        <span class="article-list-divider">-</span>
-        <span class="article-list-minutes">
-          {% capture words %}
-            {{ post.content | number_of_words }}
-          {% endcapture %}
-          {% unless words contains "-" %}
-            {{ words | plus: 250 | divided_by: 250 | append: " minute read" }}
-          {% endunless %}
-        </span>
-        <span class="article-list-divider">-</span>
-        <div class="article-list-tags">
-          {% for tag in post.tags %}
-            <a href="{{ 'tag/' | relative_url }}{{ tag }}">{{ tag }}</a>
-          {% endfor %}
-        </div>
-      </div>
-    </li>
-  {% endfor %}
-  {% if paginator.total_pages > 1 %}
-    <li class="article-pagination {% if site.settings.scrollappear_enabled %}scrollappear{% endif %}">
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="article-pagination-left">{% include svg-icon.html icon="arrow-left" %} Older posts</a>
-      {% endif %}
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="article-pagination-right">Newer posts {% include svg-icon.html icon="arrow-right" %}</a>
-      {% endif %}
-    </li>
-  {% endif %}
+  <meta property="og:title" content="The high quality, completely customizable, performant and 100% free blog template for Jekyll">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://blog.aneeshmg.com/">
+  <meta property="og:description" content="Chalk uses all the best tools and merges them into one premium blogging theme.">
+  <meta property="og:site_name" content="AneeshWrites">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="http://blog.aneeshmg.com/">
+  <meta name="twitter:title" content="The high quality, completely customizable, performant and 100% free blog template for Jekyll">
+  <meta name="twitter:description" content="Chalk uses all the best tools and merges them into one premium blogging theme.">
+
+  
+    <meta property="og:image" content="http://blog.aneeshmg.com/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+    <meta name="twitter:image" content="http://blog.aneeshmg.com/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+  
+
+  <link href="http://blog.aneeshmg.com/feed.xml" type="application/rss+xml" rel="alternate" title="AneeshWrites Last 10 blog posts" />
+
+  
+
+  
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-light-4ad0402909b49af141b9ad8a32447d46f64e05ce2b1524c6e8f5680d6cb9ae32.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-light-2663b6021003ed41b465cee2349efd556b0f3fff207708521d71990febf394ca.png">
+    <link rel="stylesheet" type="text/css" integrity="sha256-ZvRfSW09GOXQvgocQZcINSasWEyUXQ70kvc3WGfzsZE=" crossorigin="anonymous" href="/assets/light-66f45f496d3d18e5d0be0a1c4197083526ac584c945d0ef492f7375867f3b191.css">
+  
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="AneeshWrites">AneeshWrites</a>
+  <ul class="header-links">
+    
+    
+      <li>
+        <a href="https://twitter.com/mg_aneesh" rel="noreferrer noopener" target="_blank" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter">
+  <use href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter" xlink:href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://www.facebook.com/aneesh.mg" rel="noreferrer noopener" target="_blank" title="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-facebook">
+  <use href="/assets/facebook-72c99b26d37bee65607720abb23d26b44ef30cca1187f98b0d9305be1230b1bf.svg#icon-facebook" xlink:href="/assets/facebook-72c99b26d37bee65607720abb23d26b44ef30cca1187f98b0d9305be1230b1bf.svg#icon-facebook"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+      <li>
+        <a href="https://github.com/aneeshmg" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://stackoverflow.com/users/2058933" rel="noreferrer noopener" target="_blank" title="Stack Overflow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-stackoverflow">
+  <use href="/assets/stackoverflow-12ba59133ed134d26156d30f095e0222b6039395cf26f2fab0cb6ce3ef2db00d.svg#icon-stackoverflow" xlink:href="/assets/stackoverflow-12ba59133ed134d26156d30f095e0222b6039395cf26f2fab0cb6ce3ef2db00d.svg#icon-stackoverflow"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/in/aneeshmg" rel="noreferrer noopener" target="_blank" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-linkedin">
+  <use href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin" xlink:href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://instagram.com/aneeshmg" rel="noreferrer noopener" target="_blank" title="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-instagram">
+  <use href="/assets/instagram-37f85bc75b43ecc4c114d9a46f846327fe13c5893787c6afbcfef9d30d58bd9e.svg#icon-instagram" xlink:href="/assets/instagram-37f85bc75b43ecc4c114d9a46f846327fe13c5893787c6afbcfef9d30d58bd9e.svg#icon-instagram"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</nav>
+
+        <ul class="article-list">
+  
+  
 </ul>
+
+        <footer class="footer scrollappear">
+  <p>
+    Chalk is a high quality, completely customizable, performant and 100% free
+    blog template for Jekyll built by
+    <a href="/about" title="About me">Nielsen Ramon</a>. Download it <a href="https://github.com/nielsenramon/chalk" rel="noreferrer noopener" target="_blank" title="Download Chalk">here</a>.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119329240-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-119329240-3');
+  </script>
+
+
+<script src="/assets/vendor-600e49ea335fb895c0d326da11300ea5b2bcc0a442b7932323e7515bfd9e907e.js" integrity="sha256-YA5J6jNfuJXA0ybaETAOpbK8wKRCt5MjI+dRW/2ekH4=" crossorigin="anonymous" type="text/javascript"></script>
+
+
+  <script src="/assets/webfonts-dc5a9cdfae25ce1667520dd41e4571be8288eec567cff9c583beffb57ed3a0e8.js" integrity="sha256-3Fqc364lzhZnUg3UHkVxvoKI7sVnz/nFg77/tX7ToOg=" crossorigin="anonymous" type="text/javascript"></script>
+
+
+
+  <script src="/assets/scrollappear-528db8b700e5eaed96d306068a0015dc8ab79672a5d7142d1efbaa4944a8f500.js" integrity="sha256-Uo24twDl6u2W0wYGigAV3Iq3lnKl1xQtHvuqSUSo9QA=" crossorigin="anonymous" type="text/javascript"></script>
+
+
+<script src="/assets/application-ce39b20e524ec74e03c7f8cbb7f0a356e00740548b6e1007e5a2a30538fff366.js" integrity="sha256-zjmyDlJOx04Dx/jLt/CjVuAHQFSLbhAH5aKjBTj/82Y=" crossorigin="anonymous" type="text/javascript"></script>
+
+</body>
+</html>
