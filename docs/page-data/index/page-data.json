@@ -1,0 +1,1 @@
+{"componentChunkName":"component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-homepage-query-tsx","path":"/","result":{"data":{"allPost":{"nodes":[{"__typename":"MdxPost","slug":"/hello-world","title":"Hello World","date":"11.03.2020","excerpt":"Hello World","timeToRead":1,"description":null,"tags":null}]}},"pageContext":{"formatString":"DD.MM.YYYY"}}}

@@ -1,14 +1,11 @@
-# Global
-*.DS_Store
-Desktop.ini
-Thumbs.db
+*.log
+node_modules/*
+*.lock
+package-lock.json
+.DS_Store
 
-# Project
-!.keep
-*.sass-cache
-/_assets/yarn/
-/_site/
-/.jekyll-cache/
-Gemfile.lock
-yarn.lock
-.idea
+
+!node_modules/@lekoarts*
+.cache
+**/.cache
+public
