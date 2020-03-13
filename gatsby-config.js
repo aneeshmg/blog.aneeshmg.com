@@ -13,7 +13,7 @@ module.exports = {
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: `https://blog.aneeshmg.com`,
     // Used for SEO
-    siteDescription: ``,
+    siteDescription: `Yet another blog`,
     // Will be set on the <html /> tag
     siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
