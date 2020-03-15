@@ -58,6 +58,15 @@
   Link: </component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-tags-query-tsx-50477c8d52fbd391f750.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/tags/page-data.json>; rel=preload; as=fetch; crossorigin
+/programming-101
+  Link: </webpack-runtime-cc43a6d99c66cf33c0d0.js>; rel=preload; as=script
+  Link: </commons-67990abb1c6db42d339a.js>; rel=preload; as=script
+  Link: </app-c072210cba4a61551f3b.js>; rel=preload; as=script
+  Link: </styles-e5a9303a52135b598c83.js>; rel=preload; as=script
+  Link: </commons-67990abb1c6db42d339a.js>; rel=preload; as=script
+  Link: </component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-7cb5a793457cfafa225a.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/programming-101/page-data.json>; rel=preload; as=fetch; crossorigin
 /theory-of-reductionism
   Link: </webpack-runtime-cc43a6d99c66cf33c0d0.js>; rel=preload; as=script
   Link: </commons-67990abb1c6db42d339a.js>; rel=preload; as=script
