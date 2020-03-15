@@ -1,0 +1,71 @@
+---
+title: "Programming 101"
+date: 2020-03-14
+slug: "/programming-101"
+---
+
+When I was an Engineering student, I found myself around people who found it hard to really understand the crux of what it meant to "program". This is written for people who are new to 
+programming and want to really know what the whole idea behind it is (thinking in first principles).
+
+Imagine you have a monkey who understands a bunch of words and is intellectually capable of counting, ie, if you showed the monkey two objects, it would respond in some way to inform you that you are actually showing it __two__ objects.
+
+Now we need to teach it (ie, 'program') it to perform addition.
+
+So as humans, the concept of addition is so deeply understood by our brains that it takes a fraction of a second to perform addition on numbers upto two digits, on exceptional cases we have human calculators who are on a completely different league. Anyways how would we instruct our monkey friend to do such a task? Unfortunately for our monkey friend, it does not understand the concept of addition. But we can instruct the monkey (assuming the monkey understands basic language constructs) to simulate the process of addition.
+
+__Human__: (to Monkey) Bring two boxes. _this is an instruction_
+
+The monkey understands this and brings two boxes.
+
+__Human__: Put two stones in this (pointing at the 1st box) box. _another instruction_
+
+The monkey understands this and puts two stones in the box pointed at.
+
+__Human__: Put three stones in this (pointing at the 2nd box) box. _another instruction_
+
+Again, the monkey obeys.
+
+_more instructions_...
+
+__Human__: Bring another box.
+
+__Human__: Put all the stones in the new box.
+
+The monkey understands this and performs the action.
+
+Now, __Human__: Count the number of stones in the new box. _another instruction_
+
+The monkey responds with a notation which means __five__.
+Now we have successfully programmed a monkey to perform __addition__ for us.
+
+This may seem silly if we are talking about a monkey, as it understands a limited set of instructions. But imagine a device(a monkey) capable of understanding and executing our instructions (a larger set) at the rate of 1 million instructions per second! Such a device is already long outdated! Also considering such a device would not experience fatigue as long as it gets the power it needs to work, I'd say its pretty useful!
+
+Add a few fancy instruments like I/O, memory and you have a fully functioning computer which will obey your instructions.
+
+Now to compare the monkey analogy to a simple C program which adds two numbers,
+```
+#include<stdio.h>
+
+int main() {
+    int a, b, c;
+    scanf("%d%d", &a, &b);
+    c = a + b;
+    printf("%d", c);
+}
+```
+
+Variables (here a,b,c) are the _boxes_ which we instructed the monkey to bring.
+
+We explicitly told the monkey to have two stones and three stones to the two boxes. Here the '__stone__' is the data type which is '__int__' in our program.
+
+The 'processing' step of `c = a + b` is us asking the monkey to put the contents of the two boxes to a new box.
+
+Finally the result is displayed to the user!
+
+This is a very simple analogy to explain the concept of programming.
+
+Programming, if thought of in simple analogies such as this will make it more fun to use and learn and understand better.
+
+![coding](image1.jpg)
+
+Happy programming! Cheers!
